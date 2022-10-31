@@ -3,20 +3,31 @@
 namespace EmployRoll1
 
 {
-    //usecase1
+    //UseCase2
+
     internal class Program
     {
         static void Main(string[] args)
         {
+            int IS_FULL_TIME = 1;
+            int EMP_RATE_PER_HOUR = 2;
+            int empHrs = 0;
+            int empWage = 0;
             Random random = new Random();
-            int value = random.Next(0, 1);
-            if (value == 1)
+            int empCheck = random.Next(0, 2);
+            if (empCheck == IS_FULL_TIME)
             {
-                Console.WriteLine("present");
+                empHrs = 8;
+
             }
             else
-                Console.WriteLine("not present");
+            {
+                empHrs = 0;
+            }
+            empWage = empHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine("Emp wage : " + empWage);
         }
     }
 }
+
 
